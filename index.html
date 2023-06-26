@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      .root {
+        height: 100%;
+        margin: 0;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .root {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #eee;
+      }
+
+      .label {
+        margin: 0 16px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body style="margin: 50px">
+    <div class="root">
+      <div class="container">
+        <button class="btn">Click Me!</button>
+        <p class="label">&lt;- These are buttons! -&gt;</p>
+        <button class="btn">Click Me Too!</button>
+      </div>
+    </div>
+
+    <script>
+      window.onclick = e => {
+        const { screenX, clientX, pageX, offsetX, x } = e;
+
+        console.log({
+          screenX,
+          clientX,
+          pageX,
+          offsetX,
+          x,
+        });
+      };
+    </script>
+  </body>
+</html>
